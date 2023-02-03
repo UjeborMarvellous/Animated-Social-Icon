@@ -1,0 +1,74 @@
+body{
+    background: rgba(0,0,0,0.9) ;
+}
+h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 15%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contain {
+    position: absolute;
+    top: 25%;
+    left: 12%;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    transform: translate(0%, 100%);
+}
+
+.contain .btn{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 7px 20px -7px #fff;
+    overflow: hidden;
+    position: relative;
+    color: #42d2ff;
+}
+
+.contain .btn i {
+    position: relative;
+    z-index: 4;
+    line-height: 90px;
+    font-size: 30px;
+}
+
+.contain .btn::before{
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    background: linear-gradient(#00c6ff, #ff7200);
+    transform: rotate(15deg);
+    left: -110%;
+    top: 90%;
+}
+.contain .btn:hover{
+    color: #fff;
+    transform: scale(1.3);
+}
+
+.contain .btn:hover::before {
+    animation: onHover 0.7s 1;
+    left: -10%;
+    top: -10%;  
+}
+
+@keyframes onHover  {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        left: -10%;
+        top: -10%;
+    }
+}
